@@ -211,7 +211,10 @@
 			"request": {
 				"auth": {
 					"type": "apikey",
-					"apikey": {}
+					"apikey": {
+						"value": "postmanrulz",
+						"key": "api-key"
+					}
 				},
 				"method": "POST",
 				"header": [

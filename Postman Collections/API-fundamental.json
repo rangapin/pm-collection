@@ -191,6 +191,19 @@
 		},
 		{
 			"name": "skill check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6be6cd6d-ebf8-41f6-a4c4-fdb5dc8017ed",
+						"exec": [
+							"console.log(pm.response.json())\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "d6f68590-02df-452b-a59f-9c3940a35575",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -202,11 +215,16 @@
 						"key": "movieName",
 						"value": "The Big Blue",
 						"type": "text"
+					},
+					{
+						"key": "student-expert",
+						"value": "skillcheck",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"actorName\": \"Jean Reno\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -214,14 +232,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://postman-echo.com/post?movieName",
-					"protocol": "https",
+					"raw": "{{skillcheckBaseUrl}}?movieName",
 					"host": [
-						"postman-echo",
-						"com"
-					],
-					"path": [
-						"post"
+						"{{skillcheckBaseUrl}}"
 					],
 					"query": [
 						{

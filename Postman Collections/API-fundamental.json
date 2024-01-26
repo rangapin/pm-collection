@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "49a6e6f2-47c1-4f6d-8cbb-08c26100ad64",
+		"name": "Postman Library API v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get books",
+			"id": "9ef4dd50-aff2-4eb4-b367-7c15bb3734fe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/books"
+			},
+			"response": []
+		},
+		{
+			"name": "get fiction books",
+			"id": "77c1d23c-d229-4b0d-8d96-86df0657cec5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "fiction",
+							"disabled": true
+						},
+						{
+							"key": "checkedOut ",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book by id",
+			"id": "1a660f60-cb63-48bd-a796-1b70a1571558",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/books/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "29cd820f-82f9-4b45-a7f4-0924111b5b89"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c812c452-38d3-4404-bec1-6d3dc52b524e",
+						"exec": [
+							"// save the value of the \"id\" value from the API JSON response to a const variable named \"id\"\r",
+							"const id = pm.response.json().id\r",
+							"// set the value of the \"id\" variable to a collection variable also called \"id\".\r",
+							"pm.collectionVariables.set(\"id\", id)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "6b68a17d-f4a5-43e3-a6a6-8995bfcee29a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Subtle Art of Not Giving a F*ck\",\r\n  \"author\": \"Mark Manson\",\r\n  \"genre\": \"Self improvement\",\r\n  \"yearPublished\": 2016\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/books"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "postmanrulz",
+			"key": "api-key"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "445cd162-08be-4d4a-9a41-f63103a3fdd2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a9a6746d-872c-4ee6-b255-a931e1e69665",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://library-api.postmanlabs.com"
+		},
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}

@@ -37,7 +37,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/books",
+					"raw": "{{baseUrl}}/books?genre=fiction&checkedOut=false",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -47,13 +47,11 @@
 					"query": [
 						{
 							"key": "genre",
-							"value": "fiction",
-							"disabled": true
+							"value": "fiction"
 						},
 						{
-							"key": "checkedOut ",
-							"value": "true",
-							"disabled": true
+							"key": "checkedOut",
+							"value": "false"
 						}
 					]
 				}

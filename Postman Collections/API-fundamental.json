@@ -209,6 +209,10 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {}
+				},
 				"method": "POST",
 				"header": [
 					{

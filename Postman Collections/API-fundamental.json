@@ -197,7 +197,7 @@
 					"script": {
 						"id": "6be6cd6d-ebf8-41f6-a4c4-fdb5dc8017ed",
 						"exec": [
-							"console.log(pm.response.json())\r",
+							"console.log(pm.collectionVariables.set(\"actorName\", \"favoriteActor\"))\r",
 							""
 						],
 						"type": "text/javascript"
@@ -288,6 +288,10 @@
 		{
 			"key": "skillcheckBaseUrl",
 			"value": "https://postman-echo.com/post"
+		},
+		{
+			"key": "actorName",
+			"value": ""
 		}
 	]
 }

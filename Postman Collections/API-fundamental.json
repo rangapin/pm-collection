@@ -123,6 +123,18 @@
 				"url": "{{baseUrl}}/books"
 			},
 			"response": []
+		},
+		{
+			"name": "checkout a book",
+			"id": "2bd6d6dc-7ea6-47ea-83f8-f9c98ee74b51",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"auth": {

@@ -160,6 +160,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "delete a book",
+			"id": "347f6f40-23d5-4d4d-a058-0a3219789336",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/books/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {

@@ -197,8 +197,7 @@
 					"script": {
 						"id": "6be6cd6d-ebf8-41f6-a4c4-fdb5dc8017ed",
 						"exec": [
-							"pm.collectionVariables.get(\"favoriteActor\")\r",
-							""
+							"console.log(pm.collectionVariables.set(\"favoriteActor\"))"
 						],
 						"type": "text/javascript"
 					}

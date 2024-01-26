@@ -212,8 +212,8 @@
 				"auth": {
 					"type": "apikey",
 					"apikey": {
-						"value": "postmanrulz",
-						"key": "api-key"
+						"value": "skillcheck",
+						"key": "student-expert"
 					}
 				},
 				"method": "POST",
@@ -226,7 +226,8 @@
 					{
 						"key": "student-expert",
 						"value": "skillcheck",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {

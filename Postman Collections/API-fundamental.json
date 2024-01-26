@@ -188,6 +188,18 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "skill check",
+			"id": "d6f68590-02df-452b-a59f-9c3940a35575",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"auth": {
